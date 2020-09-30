@@ -3,12 +3,14 @@ Please read the attached NMROM paper first.
 TO INSTALL ON LC ENVIRONMENTS:
 1. ./setup.sh
 
-TO RUN ON LC ENVIRONMENTS:
-1. Open up an mxterm: "mxterm 1 1 440" on any machine with GPU. This is required to use the GPU on LC.
-2. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
-3. Run './generateResults.sh' at any level directory within notebooks to generate
+TO TRAIN/GENERATE DATA ON LC ENVIRONMENTS:
+1. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
+2. Run 'sbatch generateResults.sh' at any level directory within notebooks to generate
 all the data and models for LS-ROM and NM-ROM that lies within its path.
-4. Run any testing files you would like in this mxterm using "jupyter nbconvert --to script --inplace --execute [FILENAME].ipynb"
+
+TO TEST MODELS ON LC ENVIRONMENTS:
+1. Open up an mxterm: "mxterm 1 1 440" on any machine with GPU. This is required to use the GPU on LC.
+2. Run any testing files you would like in this mxterm using "runipy [FILE].ipynb"
 to create mat files, plots, etc.
 
 Note: You have to generate data first and then train models.
