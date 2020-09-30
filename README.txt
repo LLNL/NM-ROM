@@ -5,8 +5,8 @@ TO INSTALL ON LC ENVIRONMENTS:
 
 TO RUN ON LC ENVIRONMENTS:
 1. source nm-rom/bin/activate
-2. Open up an mxterm: "mxterm 1 1 440". This is required to use the GPU.
-3. Run any file you would like using "jupyter nbconvert --to script --inplace --execute [FILENAME].ipynb"
+2. Open up an mxterm: "mxterm 1 1 440" on any machine with GPU. This is required to use the GPU on LC.
+3. Run any file you would like in this mxterm using "jupyter nbconvert --to script --inplace --execute [FILENAME].ipynb"
 
 Note: You have to generate data first and then train models.
 
