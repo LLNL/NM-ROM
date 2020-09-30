@@ -8,7 +8,7 @@ TO RUN ON LC ENVIRONMENTS:
 2. Start jupyterlab: 
 	a. CZ: https://lc.llnl.gov/jupyter/hub/user/[user]/lab
 	b. RZ: https://rzlc.llnl.gov/jupyter/hub/user/[user]/lab
-
+3. Run the scripts within notebooks/* on jupyterlab.
 
 Note: You have to generate data first and then train models.
 
