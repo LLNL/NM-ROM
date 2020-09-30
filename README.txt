@@ -1,6 +1,9 @@
 Please read the attached NMROM paper first.
 
-FOR LC ENVIRONMENTS:
+TO INSTALL ON LC ENVIRONMENTS:
+1. ./setup.sh
+
+TO RUN ON LC ENVIRONMENTS:
 1. source nm-rom/bin/activate
 2. Start jupyterlab: 
 	a. CZ: https://lc.llnl.gov/jupyter/hub/user/[user]/lab
