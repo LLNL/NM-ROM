@@ -1,5 +1,12 @@
 Please read the attached NMROM paper first.
 
+FOR LC ENVIRONMENTS:
+1. source nm-rom/bin/activate
+2. Start jupyterlab: 
+	a. CZ: https://lc.llnl.gov/jupyter/hub/user/[user]/lab
+	b. RZ: https://rzlc.llnl.gov/jupyter/hub/user/[user]/lab
+
+
 Note: You have to generate data first and then train models.
 
 General steps are
