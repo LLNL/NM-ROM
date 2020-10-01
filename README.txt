@@ -13,8 +13,8 @@ TO TEST MODELS ON LC ENVIRONMENTS:
 	a. CZ: https://lc.llnl.gov/jupyter/hub/user/[user]/lab
 	b. RZ: https://rzlc.llnl.gov/jupyter/hub/user/[user]/lab
 2. Switch to the NM-ROM kernel on jupyterlab.
-3. Run any testing files you would like on jupyterlab.
-to create mat files, plots, etc.
+3. Run any testing files you would like on jupyterlab
+to create mat files, plots, etc. Skip any files starting with build_* or train_* as they are handled by generateResults.sh
 
 Note: You have to generate data first and then train models.
 
