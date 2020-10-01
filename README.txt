@@ -7,6 +7,7 @@ TO TRAIN/GENERATE DATA ON LC ENVIRONMENTS:
 1. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
 2. Run 'sbatch generateResults.sh' at any level directory within notebooks to generate
 all the data and models for LS-ROM and NM-ROM that lies within its path.
+3. If you choose to generate results for each directory individually, test_DEIM must be generated before test_predictive.
 
 TO TEST MODELS ON LC ENVIRONMENTS:
 1. Start jupyterlab: 
