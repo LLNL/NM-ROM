@@ -1,0 +1,7 @@
+nm-rom/*
+**/data/*
+**/model/*
+**/.ipynb_checkpoints/*
+**.out
+**.tar
+**.log
