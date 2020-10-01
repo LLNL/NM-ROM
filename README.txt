@@ -9,9 +9,10 @@ TO TRAIN/GENERATE DATA ON LC ENVIRONMENTS:
 all the data and models for LS-ROM and NM-ROM that lies within its path.
 
 TO TEST MODELS ON LC ENVIRONMENTS:
-1. Open up an mxterm: "mxterm 1 1 440" on any machine with GPU. This is required to use the GPU on LC.
-2. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
-3. Run any testing files you would like in this mxterm using "runipy [FILE].ipynb"
+1. Start jupyterlab: 
+	a. CZ: https://lc.llnl.gov/jupyter/hub/user/[user]/lab
+	b. RZ: https://rzlc.llnl.gov/jupyter/hub/user/[user]/lab
+2. Run any testing files you would like on jupyterlab.
 to create mat files, plots, etc.
 
 Note: You have to generate data first and then train models.
