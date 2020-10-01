@@ -10,14 +10,14 @@
 
 path=$PWD
 
-cd $path/test_red-dim
+cd $path/test_DEIM
 ./generateResults.sh
 
-cd $path/test_DEIM
+cd $path/test_predictive
 ./generateResults.sh
 
 cd $path/test_nparam
 ./generateResults.sh
 
-cd $path/test_predictive
+cd $path/test_red-dim
 ./generateResults.sh
