@@ -8,5 +8,6 @@
 #SBATCH --open-mode truncate
 #SBATCH -M rzhasgpu
 
+cp ../test_DEIM/data/* data/.
 cp ../test_DEIM/model/* model/.
 srun runipy build_data_high_Re_prediction.ipynb
