@@ -1,3 +1,4 @@
+#!/bin/bash
 #SBATCH -N 1
 #SBATCH --exclusive
 #SBATCH -J generateResults
@@ -7,7 +8,6 @@
 #SBATCH --open-mode truncate
 #SBATCH -M rzhasgpu
 
-#!/bin/bash
 path=$PWD
 
 cd $path/test_red-dim

@@ -1,3 +1,4 @@
+#!/bin/bash
 #SBATCH -N 1
 #SBATCH --exclusive
 #SBATCH -J generateResults
@@ -6,8 +7,6 @@
 #SBATCH -o sbatch.log
 #SBATCH --open-mode truncate
 #SBATCH -M rzhasgpu
-
-#!/bin/bash
 
 srun runipy build_data_high_Re_nparam.ipynb
 srun runipy train_LS-ROM_high_Re_nparam_2.ipynb
