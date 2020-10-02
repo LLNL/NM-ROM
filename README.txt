@@ -3,11 +3,16 @@ Please read the attached NMROM paper first.
 TO INSTALL ON LC ENVIRONMENTS:
 1. ./setup.sh
 
-TO TRAIN/GENERATE DATA ON LC ENVIRONMENTS:
+TO TRAIN/GENERATE DATA BY BATCH ON LC ENVIRONMENTS (SUPPRESSES PLOTS AND OUTPUT):
 1. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
 2. Run 'sbatch generateResults.sh' at any level directory within notebooks to generate
 all the data and models for LS-ROM and NM-ROM that lies within its path.
 3. If you choose to generate results for each directory individually, test_DEIM must be generated before test_predictive.
+
+TO RUN TRAINING/DATA GENERATION/TESTING FILES INDIVIDUALLY AS PYTHON SCRIPTS (DOES NOT SUPPRESS PLOTS AND OUTPUT):
+1. source nm-rom/bin/activate
+2. In the directory you wish to run files: jupyter nbconvert --to script *.ipynb
+3. ipython [FILE].py
 
 TO TEST MODELS ON LC ENVIRONMENTS:
 1. Start jupyterlab: 
