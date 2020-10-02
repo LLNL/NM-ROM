@@ -18,7 +18,7 @@ TO RUN TRAINING/GENERATE DATA INDIVIDUALLY (DOES NOT SUPPRESS PLOTS AND OUTPUT):
 2. source nm-rom/bin/activate
 3. In the directory you wish to run files: jupyter nbconvert --to script *.ipynb
 4. ipython [FILE].py
-NOTE: You may have to delete any checkpoint files (rm -rf checkpoint*) if the last run was aborted. 
+NOTE: You may have to delete any corrupted checkpoint files (rm -rf checkpoint*) if the last run was aborted. 
 test_DEIM must be generated before test_predictive, and the data and models must be copied over from test_DEIM to test_predictive.
 
 There are two ways to test the models, on Jupyterlab or on the command-line.
