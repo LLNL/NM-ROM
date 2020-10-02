@@ -11,15 +11,15 @@ TO TRAIN/GENERATE DATA BY BATCH (SUPPRESSES PLOTS AND OUTPUT):
 2. There are generateResults.sh at every subdirectory within notebooks.
 3. If on LC, run 'sbatch generateResults.sh' at any level directory within notebooks to generate
 all the data and models for LS-ROM and NM-ROM that lies within its path. If not on LC, run './generateResults.sh'
-4. If you choose to generate results for each directory individually, test_DEIM must be generated before test_predictive.
+NOTE: test_DEIM must be generated before test_predictive.
 
 TO RUN TRAINING/GENERATE DATA INDIVIDUALLY (DOES NOT SUPPRESS PLOTS AND OUTPUT):
 1. If on LC: mxterm 1 1 440
 2. source nm-rom/bin/activate
 3. In the directory you wish to run files: jupyter nbconvert --to script *.ipynb
 4. ipython [FILE].py
-5. If you choose to generate results individually, test_DEIM must be generated before test_predictive, and the data and models
-must be copied over to test_predictive.
+NOTE: You may have to delete any checkpoint files (rm -rf checkpoint*) if the last run was aborted. 
+test_DEIM must be generated before test_predictive, and the data and models must be copied over from test_DEIM to test_predictive.
 
 There are two ways to test the models, on Jupyterlab or on the command-line.
 
