@@ -4,9 +4,7 @@ TO INSTALL:
 1. ./setup.sh
 
 There are two ways to generate data and train the models, by batch or individually.
-
-For 1D (test_DEIM, test_predictive), generating by batch or individual is fine. For all other models, generating individually is recommended
-due to the long GPU training time.
+Generating individually is recommended due to the long GPU training time, but the batch option is available, if needed.
 
 TO TRAIN/GENERATE DATA BY BATCH (SUPPRESSES PLOTS AND OUTPUT):
 1. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
