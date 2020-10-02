@@ -5,7 +5,7 @@ TO INSTALL:
 
 There are two ways to generate data and train the models, by batch or individually.
 
-For 1D (test_DEIM, test_predictive), generating by batch or individual is fine. For all others models, generating individually is recommended
+For 1D (test_DEIM, test_predictive), generating by batch or individual is fine. For all other models, generating individually is recommended
 due to the long GPU training time.
 
 TO TRAIN/GENERATE DATA BY BATCH (SUPPRESSES PLOTS AND OUTPUT):
@@ -20,6 +20,8 @@ TO RUN TRAINING/GENERATE DATA INDIVIDUALLY (DOES NOT SUPPRESS PLOTS AND OUTPUT):
 2. source nm-rom/bin/activate
 3. In the directory you wish to run files: jupyter nbconvert --to script *.ipynb
 4. ipython [FILE].py
+5. If you choose to generate results individually, test_DEIM must be generated before test_predictive, and the data and models
+must be copied over to test_predictive.
 
 There are two ways to test the models, on Jupyterlab or on the command-line.
 
