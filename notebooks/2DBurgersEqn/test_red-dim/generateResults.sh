@@ -8,6 +8,7 @@
 #SBATCH --open-mode truncate
 #SBATCH -M rzhasgpu
 
+rm -rf checkpoint*
 srun runipy build_data_high_Re.ipynb
 srun runipy train_LS-ROM_high_Re_red-dim_3.ipynb
 srun runipy train_LS-ROM_high_Re_red-dim_5.ipynb
