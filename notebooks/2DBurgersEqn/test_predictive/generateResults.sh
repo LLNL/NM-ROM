@@ -16,7 +16,7 @@ rm -rf checkpoint*
 cp ../test_DEIM/data/* data/.
 cp ../test_DEIM/model/* model/.
 source ../../../nm-rom/bin/activate
-jupyter nbconvert --to script *.py
+jupyter nbconvert --to script *.ipynb
 sed -i '/ipython/d' ./*.py
 sed -i '/plt.show()/d' ./*.py
 srun python build_data_high_Re_prediction.py
