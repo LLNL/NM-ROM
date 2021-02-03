@@ -6,7 +6,6 @@
 #SBATCH -p pbatch
 #SBATCH -o sbatch.log
 #SBATCH --open-mode truncate
-#SBATCH -M rzhasgpu
 
 rm -rf checkpoint*
 srun runipy build_data_high_Re.ipynb

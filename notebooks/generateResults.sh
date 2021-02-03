@@ -6,7 +6,6 @@
 #SBATCH -p pbatch
 #SBATCH -o sbatch.log
 #SBATCH --open-mode truncate
-#SBATCH -M rzhasgpu
 
 path=$PWD
 
