@@ -1,7 +1,8 @@
 Please read the attached NMROM paper first.
 
 TO INSTALL:
-1. ./coral_setup.sh
+1. Clone this repo in a directory that has a lot of space. /usr/workspace/* is a good candidate.
+2. ./coral_setup.sh
 
 There are two ways to generate data and train the models, by batch or individually.
 Generating individually is recommended due to the long GPU training time, but the batch option is available, if needed.
