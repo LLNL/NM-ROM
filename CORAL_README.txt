@@ -6,17 +6,19 @@ TO INSTALL:
 There are two ways to generate data and train the models, by batch or individually.
 Generating individually is recommended due to the long GPU training time, but the batch option is available, if needed.
 
-TO TRAIN/GENERATE DATA BY BATCH:
+TO TRAIN/GENERATE DATA BY BATCH (SUPPRESSES PLOTS AND OUTPUT):
 1. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
 2. There are generateResults.sh at every subdirectory within notebooks.
 3. 'bsub generateResults.sh' at any level directory within notebooks to generate
 all the data and models for LS-ROM and NM-ROM that lies within its path.
 NOTE: test_DEIM must be generated before test_predictive.
 
-TO RUN TRAINING/GENERATE DATA INDIVIDUALLY:
+TO RUN TRAINING/GENERATE DATA INDIVIDUALLY (DOES NOT SUPPRESS PLOTS AND OUTPUT):
 1. lalloc 1
 2. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
-3. python [FILE].py
+3. In the directory you wish to run files: jupyter nbconvert --to script *.ipynb
+4. In the directory you wish to run files: sed -i '/ipython/d' ./*.py
+5. python [FILE].py
 NOTE: You may have to delete any corrupted checkpoint files (rm -rf checkpoint*) if the last run was aborted.
 test_DEIM must be generated before test_predictive, and the data and models must be copied over from test_DEIM to test_predictive.
 
