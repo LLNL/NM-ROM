@@ -6,8 +6,17 @@
 #SBATCH -p pbatch
 #SBATCH -o sbatch.log
 #SBATCH --open-mode truncate
+#BSUB -N 1
+#BSUB -x
+#BSUB -J generateResults
+#BSUB -W 24:00:00
+#BSUB -oe sbatch.log
 
 rm -rf checkpoint*
-srun runipy build_data_v2.ipynb
-srun runipy train_LS-ROM_v2.ipynb
-srun runipy train_NM-ROM_v2_swish.ipynb
+source ../../../nm-rom/bin/activate
+jupyter nbconvert --to script *.ipynb
+sed -i '/ipython/d' ./*.py
+sed -i '/plt.show()/d' ./*.py
+srun python build_data_v2.py
+srun python train_LS-ROM_v2.py
+srun python train_NM-ROM_v2_swish.py

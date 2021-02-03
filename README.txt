@@ -13,18 +13,20 @@ TO TRAIN/GENERATE DATA BY BATCH (SUPPRESSES PLOTS AND OUTPUT):
 all the data and models for LS-ROM and NM-ROM that lies within its path. If not on LC, run './generateResults.sh'
 NOTE: test_DEIM must be generated before test_predictive.
 
-TO RUN TRAINING/GENERATE DATA INDIVIDUALLY (DOES NOT SUPPRESS PLOTS AND OUTPUT):
+TO RUN TRAINING/GENERATE DATA INDIVIDUALLY:
 1. If on LC: mxterm 1 1 440
 2. source nm-rom/bin/activate
 3. In the directory you wish to run files: jupyter nbconvert --to script *.ipynb
-4. ipython [FILE].py
-NOTE: You may have to delete any corrupted checkpoint files (rm -rf checkpoint*) if the last run was aborted. 
+4. In the directory you wish to run files: sed -i '/ipython/d' ./*.py
+5. To suppress plots: sed -i '/plt.show()/d' ./*.py
+6. python [FILE].py
+NOTE: You may have to delete any corrupted checkpoint files (rm -rf checkpoint*) if the last run was aborted.
 test_DEIM must be generated before test_predictive, and the data and models must be copied over from test_DEIM to test_predictive.
 
 There are two ways to test the models, on Jupyterlab or on the command-line.
 
 TO TEST MODELS ON JUPYTERLAB ON LC ENVIRONMENTS:
-1. Start jupyterlab: 
+1. Start jupyterlab:
 	a. CZ: https://lc.llnl.gov/jupyter/hub/user/[user]/lab
 	b. RZ: https://rzlc.llnl.gov/jupyter/hub/user/[user]/lab
 2. Switch to the NM-ROM kernel on jupyterlab.

@@ -13,12 +13,13 @@ TO TRAIN/GENERATE DATA BY BATCH (SUPPRESSES PLOTS AND OUTPUT):
 all the data and models for LS-ROM and NM-ROM that lies within its path.
 NOTE: test_DEIM must be generated before test_predictive.
 
-TO RUN TRAINING/GENERATE DATA INDIVIDUALLY (DOES NOT SUPPRESS PLOTS AND OUTPUT):
+TO RUN TRAINING/GENERATE DATA INDIVIDUALLY:
 1. lalloc 1
 2. source nm-rom/bin/activate (source nm-rom/bin/activate.csh for csh shells)
 3. In the directory you wish to run files: jupyter nbconvert --to script *.ipynb
 4. In the directory you wish to run files: sed -i '/ipython/d' ./*.py
-5. python [FILE].py
+5. To suppress plots: sed -i '/plt.show()/d' ./*.py
+6. python [FILE].py
 NOTE: You may have to delete any corrupted checkpoint files (rm -rf checkpoint*) if the last run was aborted.
 test_DEIM must be generated before test_predictive, and the data and models must be copied over from test_DEIM to test_predictive.
 
