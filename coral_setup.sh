@@ -99,4 +99,4 @@ cd ..
 
 pip install ipykernel
 python -m ipykernel install --user --name nm-rom --display-name "NM-ROM"
-pipi install nbcovert
+pip install nbcovert
