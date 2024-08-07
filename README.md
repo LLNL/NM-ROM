@@ -10,6 +10,13 @@ Our method leverages existing numerical techniques used to solve the correspondi
 - Clone this repo in a directory that has a lot of space. For LC users, /usr/workspace/* is a good candidate.
 - Execute ./setup.sh
 
+## Requirements
+- `numpy` (version 1.23.5)
+- `scipy` (version 1.8.1)
+- `matplotlib` (version 3.6.2)
+- `PyTorch` (version 1.12.1)
+- `jupyter` (version 5.1.3)
+
 ## Generating data
 There are two ways to generate data and train the models, by batch or individually.
 Generating individually is recommended due to the long GPU training time, but the batch option is available, if needed.
